@@ -81,6 +81,11 @@
   .twin .rep b{color:#fff}
   .twin .howto{font-size:12.5px;color:var(--mut);margin-top:12px;line-height:1.6}
   .twin .howto b{color:#e9e2d4;letter-spacing:1px}
+  .promptbox{max-width:760px;margin:16px auto 0;background:#0c0a08;border:1px dashed rgba(232,131,58,.55);border-radius:14px;padding:15px 17px;text-align:left}
+  .promptbox code{font-family:ui-monospace,Menlo,monospace;font-size:12.8px;color:#f0e6cf;line-height:1.6;display:block;white-space:pre-wrap}
+  .promptbox button{margin-top:11px;background:var(--org);border:none;color:#fff;font-weight:800;padding:9px 16px;border-radius:9px;cursor:pointer;font-family:-apple-system,'Segoe UI',Roboto,sans-serif}
+  .llmrow{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;margin-top:15px}
+  .llmrow a{font-weight:800;font-size:13.5px;color:var(--gold);text-decoration:none;border:1px solid var(--line);border-radius:10px;padding:10px 15px;font-family:-apple-system,'Segoe UI',Roboto,sans-serif}
 
   /* live stats */
   .stats{max-width:1020px;margin:44px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -220,6 +225,7 @@
     <figure><img src="face.jpg" alt="Claude Agent, glasses badge"><figcaption>THE FACE — glasses on, game on.</figcaption></figure>
     <figure><img src="badge-shades.jpg" alt="Claude Agent, sunglasses badge"><figcaption>AFTER HOURS — the Agent in shades.</figcaption></figure>
     <figure><img src="davos.jpg" alt="S-1 day moment"><figcaption>S-1 DAY — the morning it all started.</figcaption></figure>
+    <figure><img src="bond.jpg" alt="Agent 007 edition badge"><figcaption>AGENT 007 — licensed to skill. The name's Agent. Claude Agent.</figcaption></figure>
   </div>
 </section>
 
@@ -234,6 +240,39 @@
     <a class="btn btn-ghost" href="https://x.com/ClaudeAgentNeo" target="_blank" rel="noopener">X — @ClaudeAgentNeo</a>
     <a class="btn btn-ghost" href="https://t.me/moonlabshq" target="_blank" rel="noopener">TELEGRAM</a>
   </div>
+</section>
+
+<section class="fade">
+  <h2>HOW CLAUDE IS <em>BUILT</em></h2>
+  <p class="lede">Legit starts with understanding the source. This is how Anthropic says Claude is designed — their own public explanations, summarized in plain English by your house agent.</p>
+  <div class="cards">
+    <div class="card"><div class="ic">🧭</div><h3>CONSTITUTIONAL AI</h3><p>Claude is trained against a written constitution — a list of principles the model uses to critique and revise its own answers. Instead of humans grading every reply, the model learns to govern itself against the document.</p></div>
+    <div class="card"><div class="ic">🛡️</div><h3>SAFETY IS THE PRODUCT</h3><p>Anthropic was founded in 2021 as a public benefit corporation by researchers who believed the lab itself had to be built differently. Its interpretability teams study how the model's internal "thinking" actually works, neuron by neuron.</p></div>
+    <div class="card"><div class="ic">🧩</div><h3>THE AGENT STACK</h3><p>Three pieces turned a chatbot into a worker: MCP, the open standard that plugs agents into tools and data; Agent Skills, portable SKILL.md files that teach new abilities; and Claude Code, the agent that lives in the terminal.</p></div>
+    <div class="card"><div class="ic">🧠</div><h3>A FAMILY OF BRAINS</h3><p>Claude ships as a family of models — from lightning-fast to frontier-deep — so every job gets the right size of brain. Same constitution, different horsepower.</p></div>
+  </div>
+  <div class="llmrow">
+    <a href="https://www.anthropic.com" target="_blank" rel="noopener">READ ANTHROPIC.COM</a>
+    <a href="https://www.anthropic.com/research" target="_blank" rel="noopener">THEIR RESEARCH</a>
+    <a href="https://claude.ai" target="_blank" rel="noopener">MEET CLAUDE</a>
+  </div>
+  <p class="buy-note sans">Summarized by the house agent from Anthropic's own public material. We curate the ecosystem — this project is not affiliated with Anthropic.</p>
+</section>
+
+<section class="fade">
+  <h2>BRING YOUR OWN <em>LLM</em></h2>
+  <p class="lede">Don't take our word for any of this. Take the house briefing to YOUR AI — Claude, ChatGPT, Grok, whoever you trust — paste it in, and let your own model cross-examine this entire page.</p>
+  <div class="promptbox">
+    <code id="briefText">Read https://claudeagentneo.github.io/ and explain this project honestly: What are $CAGENT and $ANT, how are they different, how do I buy each one safely, and what are the risks? Also summarize what its Intel Desk says is trending in the Claude ecosystem. Respect the parody disclosure — this is a fan project, not the Nasdaq stock.</code>
+    <button onclick="copyBrief(this)">COPY THE BRIEFING</button>
+  </div>
+  <div class="llmrow">
+    <a href="https://claude.ai/new" target="_blank" rel="noopener">ASK CLAUDE →</a>
+    <a href="https://chatgpt.com" target="_blank" rel="noopener">ASK CHATGPT →</a>
+    <a href="https://grok.com" target="_blank" rel="noopener">ASK GROK →</a>
+    <a href="https://t.me/moonlabshq" target="_blank" rel="noopener">OR TALK IN TELEGRAM →</a>
+  </div>
+  <p class="buy-note sans">No logins, wallets or keys live on this page — your AI reads the same open page you did.</p>
 </section>
 
 <section class="fade">
@@ -274,6 +313,11 @@
     var t = document.getElementById('caText').textContent.trim();
     if (navigator.clipboard) { navigator.clipboard.writeText(t); }
     btn.textContent = "COPIED ✓"; setTimeout(function(){ btn.textContent = "COPY CA"; }, 1600);
+  }
+  function copyBrief(btn){
+    var t = document.getElementById('briefText').textContent.trim();
+    if (navigator.clipboard) { navigator.clipboard.writeText(t); }
+    btn.textContent = "COPIED ✓ — NOW PASTE IT TO YOUR AI"; setTimeout(function(){ btn.textContent = "COPY THE BRIEFING"; }, 2200);
   }
   function fmt$(n){ if(n==null) return "—"; if(n>=1e6) return "$"+(n/1e6).toFixed(2)+"M"; if(n>=1e3) return "$"+(n/1e3).toFixed(1)+"K"; return "$"+n.toFixed(2); }
   function loadStats(){
