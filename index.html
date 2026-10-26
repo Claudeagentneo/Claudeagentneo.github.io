@@ -54,6 +54,10 @@
   .ca code{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--gold);word-break:break-all;text-align:left}
   .ca button{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--org);border:none;color:#fff;font-weight:800;padding:9px 16px;border-radius:9px;cursor:pointer;white-space:nowrap}
   .ca button:active{transform:scale(.96)}
+  .routes{margin:16px auto 0;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
+  .routes a{font-weight:900;letter-spacing:.05em;text-decoration:none;padding:11px 18px;border-radius:999px;font-size:13px;border:1px solid var(--org);color:var(--org2);background:rgba(232,131,58,.07);transition:transform .15s ease,background .15s ease}
+  .routes a:hover{transform:translateY(-2px);background:rgba(232,131,58,.16)}
+  .buy-note{margin:11px auto 0;color:var(--mut);font-size:13px;position:relative;z-index:2}
 
   /* live stats */
   .stats{max-width:1020px;margin:44px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -118,6 +122,13 @@
     <a class="btn btn-ghost" href="https://dexscreener.com/solana/hpej5jwpq1bcw7soq2v6zhjm56kqugya6gprvjrjmz7c" target="_blank" rel="noopener">LIVE CHART</a>
   </div>
   <div class="ca"><code id="caText">29BBabj2oitbsUeWfibdZgbJfPpzoMgqsr673zQwpump</code><button onclick="copyCA(this)">COPY CA</button></div>
+  <div class="routes sans">
+    <a href="https://pump.fun/coin/29BBabj2oitbsUeWfibdZgbJfPpzoMgqsr673zQwpump" target="_blank" rel="noopener">PUMP.FUN</a>
+    <a href="https://app.uniswap.org/swap?chain=solana&amp;inputCurrency=SOL&amp;outputCurrency=29BBabj2oitbsUeWfibdZgbJfPpzoMgqsr673zQwpump" target="_blank" rel="noopener">UNISWAP</a>
+    <a href="https://phantom.com/tokens/solana/29BBabj2oitbsUeWfibdZgbJfPpzoMgqsr673zQwpump" target="_blank" rel="noopener">PHANTOM</a>
+    <a href="https://jup.ag/swap/SOL-29BBabj2oitbsUeWfibdZgbJfPpzoMgqsr673zQwpump" target="_blank" rel="noopener">JUPITER</a>
+  </div>
+  <p class="buy-note sans">Different doors, same exact mint — verify it before you confirm.</p>
 
   <div class="stats">
     <div class="stat"><div class="k">PRICE</div><div class="v" id="stPrice">—</div></div>
@@ -173,7 +184,7 @@
   <h2>HOW TO <em>BUY</em></h2>
   <div class="steps">
     <div class="step"><div class="n">1</div><p>Get SOL in any Solana wallet (Phantom works great).</p></div>
-    <div class="step"><div class="n">2</div><p>Tap BUY, or paste the contract address into pump.fun — check it matches this page, character for character.</p></div>
+    <div class="step"><div class="n">2</div><p>Tap BUY for Pump.fun's direct curve, or open the exact mint through Uniswap, Phantom or Jupiter — check it matches this page, character for character.</p></div>
     <div class="step"><div class="n">3</div><p>Welcome to the agent era. Join the X and Telegram so you never miss a move.</p></div>
   </div>
   <div class="socials">
