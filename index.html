@@ -65,6 +65,14 @@
   .twin .ca{margin-top:10px}
   .twin .tlinks{margin-top:12px;display:flex;gap:8px;justify-content:center}
   .twin .tlinks a{font-size:12.5px;font-weight:800;color:var(--gold);text-decoration:none;border:1px solid var(--line);border-radius:9px;padding:7px 12px}
+  .repos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:10px}
+  .repo{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:left}
+  .repo a{color:var(--gold);font-weight:900;font-size:16.5px;text-decoration:none;word-break:break-all}
+  .repo .rstars{color:var(--org);font-weight:800;font-size:13px;margin:5px 0 7px;font-family:-apple-system,'Segoe UI',Roboto,sans-serif}
+  .repo p{color:var(--mut);font-size:14px;line-height:1.55;margin:0}
+  .subhead{color:var(--gold);font-weight:900;letter-spacing:2px;font-size:14px;margin:26px 0 4px;text-align:center}
+  .skillnote{max-width:760px;margin:22px auto 0;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 20px;color:var(--mut);font-size:14.5px;line-height:1.65}
+  .skillnote b{color:var(--gold)}
 
   /* live stats */
   .stats{max-width:1020px;margin:44px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -214,6 +222,33 @@
     <a class="btn btn-ghost" href="https://x.com/ClaudeAgentNeo" target="_blank" rel="noopener">X — @ClaudeAgentNeo</a>
     <a class="btn btn-ghost" href="https://t.me/moonlabshq" target="_blank" rel="noopener">TELEGRAM</a>
   </div>
+</section>
+
+<section class="fade">
+  <h2>THE INTEL <em>DESK</em></h2>
+  <p class="lede">Not just a meme. The house tracks the whole Claude ecosystem — the repos, the skills, the tools moving the agent era — and puts the signal on one page. This page is the asset; the tokens are its flag.</p>
+
+  <div class="subhead sans">🔥 TRENDING IN THE ECOSYSTEM — MOST-STARRED, LIVE FROM GITHUB</div>
+  <div class="repos">
+    <div class="repo"><a href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener">affaan-m/ECC</a><div class="rstars">★ 289,801 · JavaScript</div><p>The agent harness performance system — skills, instincts, memory and security for coding agents.</p></div>
+    <div class="repo"><a href="https://github.com/multica-ai/andrej-karpathy-skills" target="_blank" rel="noopener">multica-ai/andrej-karpathy-skills</a><div class="rstars">★ 224,610</div><p>A single CLAUDE.md that upgrades Claude Code's behavior, distilled from Andrej Karpathy's observations.</p></div>
+    <div class="repo"><a href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener">Graphify-Labs/graphify</a><div class="rstars">★ 136,108 · Python</div><p>Turns any codebase — docs, SQL schemas, configs, PDFs — into a queryable knowledge graph.</p></div>
+    <div class="repo"><a href="https://github.com/ComposioHQ/awesome-claude-skills" target="_blank" rel="noopener">ComposioHQ/awesome-claude-skills</a><div class="rstars">★ 78,011 · Python</div><p>The curated map of Claude Skills, resources and tools for customizing Claude workflows.</p></div>
+    <div class="repo"><a href="https://github.com/hesreallyhim/awesome-claude-code" target="_blank" rel="noopener">hesreallyhim/awesome-claude-code</a><div class="rstars">★ 56,619 · Python</div><p>A hand-picked collection of the finest resources for Claude Code, the agentic coding tool.</p></div>
+    <div class="repo"><a href="https://github.com/K-Dense-AI/scientific-agent-skills" target="_blank" rel="noopener">K-Dense-AI/scientific-agent-skills</a><div class="rstars">★ 54,771 · Python</div><p>Turn any AI agent into an AI scientist — the leading agent-skills library for science.</p></div>
+  </div>
+
+  <div class="subhead sans">📡 FROM THE SOURCE — OFFICIAL ANTHROPIC REPOS</div>
+  <div class="repos">
+    <div class="repo"><a href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener">anthropics/claude-code</a><div class="rstars">★ 153,473 · TypeScript</div><p>Claude Code — the agentic coding tool that lives in your terminal and understands your codebase.</p></div>
+    <div class="repo"><a href="https://github.com/anthropics/claude-cookbooks" target="_blank" rel="noopener">anthropics/claude-cookbooks</a><div class="rstars">★ 53,811 · Notebooks</div><p>Notebooks and recipes showcasing effective ways of building with Claude.</p></div>
+    <div class="repo"><a href="https://github.com/anthropics/courses" target="_blank" rel="noopener">anthropics/courses</a><div class="rstars">★ 22,932 · Notebooks</div><p>Anthropic's own educational courses — the fastest honest way to level up on Claude.</p></div>
+    <div class="repo"><a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">anthropics/skills</a><div class="rstars">★ 170,556</div><p>Anthropic's public repository for Agent Skills — the canonical home of the SKILL.md format.</p></div>
+  </div>
+
+  <div class="skillnote sans"><b>What is a SKILL.md?</b> A single markdown file that teaches an agent a new ability — instructions, context and tool wiring in one portable file. The ecosystem now writes them by the thousand, and the best ones move faster than apps did. Start at the official source: <a href="https://github.com/anthropics/skills" target="_blank" rel="noopener" style="color:var(--gold);font-weight:800">github.com/anthropics/skills</a> — then watch this Desk; we track which skills the world is actually starring.</div>
+
+  <p class="buy-note sans">Curated by the house · Star counts pulled live from the GitHub API on Oct 26, 2026 · We curate the ecosystem — this project is not affiliated with Anthropic or any repo owner listed.</p>
 </section>
 
 <footer>
