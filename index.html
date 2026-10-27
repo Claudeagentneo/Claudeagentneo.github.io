@@ -33,12 +33,16 @@
   .facewrap::after{content:"";position:absolute;inset:-30px;border-radius:50%;border:1px dashed rgba(255,178,94,.35);animation:spin 40s linear infinite reverse}
   .morphstack{position:relative;width:230px;height:230px;border-radius:50%;overflow:hidden;border:5px solid #0c0a09;box-shadow:0 24px 70px rgba(0,0,0,.65),0 0 90px rgba(232,131,58,.35);animation:bob 5s ease-in-out infinite;background:radial-gradient(circle at 50% 42%,#2a1a10,#0c0a09 75%)}
   .morphstack img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0}
-  .morphstack img.m1{animation:morphA 12s ease-in-out infinite}
-  .morphstack img.m2{animation:morphB 12s ease-in-out infinite}
-  .morphstack img.m3{object-fit:contain;padding:26px;animation:morphC 12s ease-in-out infinite}
-  @keyframes morphA{0%,27%{opacity:1}36%,94%{opacity:0}100%{opacity:1}}
-  @keyframes morphB{0%,27%{opacity:0}36%,60%{opacity:1}69%,100%{opacity:0}}
-  @keyframes morphC{0%,60%{opacity:0}69%,94%{opacity:1}100%{opacity:0}}
+  .morphstack img.m1{animation:morphA 15s ease-in-out infinite}
+  .morphstack img.m2{animation:morphB 15s ease-in-out infinite}
+  .morphstack img.m3{animation:morphC 15s ease-in-out infinite}
+  .morphstack img.m4{animation:morphD 15s ease-in-out infinite}
+  .morphstack img.m5{object-fit:contain;padding:26px;animation:morphE 15s ease-in-out infinite}
+  @keyframes morphA{0%,15%{opacity:1}20%,95%{opacity:0}100%{opacity:1}}
+  @keyframes morphB{0%,15%{opacity:0}20%,35%{opacity:1}40%,100%{opacity:0}}
+  @keyframes morphC{0%,35%{opacity:0}40%,55%{opacity:1}60%,100%{opacity:0}}
+  @keyframes morphD{0%,55%{opacity:0}60%,75%{opacity:1}80%,100%{opacity:0}}
+  @keyframes morphE{0%,75%{opacity:0}80%,95%{opacity:1}100%{opacity:0}}
   @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
   h1{font-size:clamp(52px,11vw,110px);line-height:.95;letter-spacing:-.01em;position:relative;z-index:2}
   h1 .agent{display:block;background:linear-gradient(92deg,var(--gold),var(--org) 55%,var(--org2));-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -196,7 +200,7 @@
 <header class="hero" id="top">
   <div class="rays"></div>
   <span class="stamp">★ BORN ON S-1 DAY — OCT 26, 2026 ★</span>
-  <div class="facewrap"><div class="morphstack"><img class="m1" src="face.jpg" alt="Claude Agent — the face of $CAGENT"><img class="m2" src="badge-shades.jpg" alt="Claude Agent — shades on"><img class="m3" src="symbol.png" alt="The starburst symbol"></div></div>
+  <div class="facewrap"><div class="morphstack"><img class="m1" src="face.jpg" alt="Claude Agent — the face of $CAGENT"><img class="m2" src="neon-cg.jpg" alt="Claude Agent — $CAGENT neon badge"><img class="m3" src="badge-shades.jpg" alt="Claude Agent — shades on"><img class="m4" src="neon-ant.jpg" alt="Anthropic — $ANT neon badge"><img class="m5" src="symbol.png" alt="The starburst symbol"></div></div>
   <h1>CLAUDE <span class="agent">AGENT</span></h1>
   <div class="tickername">$ C A G E N T</div>
   <p class="mantra">"Every era gets its token. The agent era got his."</p>
@@ -226,6 +230,7 @@
 
   <div class="twinrow">
     <div class="twin cagent">
+      <img src="neon-cg2.jpg" alt="$CAGENT neon badge" style="width:150px;height:150px;border-radius:20px;margin-bottom:10px">
       <div class="tt">🟠 $CAGENT</div>
       <div class="td sans">CLAUDE AGENT — THE FLAGSHIP</div>
       <p class="rep sans"><b>What it is:</b> the people's Claude token. The Agent himself — born the morning the S-1 went public, face of the house, the one with the story, the films and the army.</p>
@@ -236,6 +241,7 @@
       <div class="tlinks sans"><a href="https://pump.fun/coin/29BBabj2oitbsUeWfibdZgbJfPpzoMgqsr673zQwpump" target="_blank" rel="noopener">PUMP.FUN</a><a href="https://app.uniswap.org/swap?chain=solana&amp;inputCurrency=SOL&amp;outputCurrency=29BBabj2oitbsUeWfibdZgbJfPpzoMgqsr673zQwpump" target="_blank" rel="noopener">UNISWAP</a><a href="https://phantom.com/tokens/solana/29BBabj2oitbsUeWfibdZgbJfPpzoMgqsr673zQwpump" target="_blank" rel="noopener">PHANTOM</a><a href="https://jup.ag/swap/SOL-29BBabj2oitbsUeWfibdZgbJfPpzoMgqsr673zQwpump" target="_blank" rel="noopener">JUPITER</a><a href="https://dexscreener.com/solana/hpej5jwpq1bcw7soq2v6zhjm56kqugya6gprvjrjmz7c" target="_blank" rel="noopener">CHART</a><a href="https://t.me/moonlabshq" target="_blank" rel="noopener">TELEGRAM</a></div>
     </div>
     <div class="twin ant">
+      <img src="neon-ant2.jpg" alt="$ANT neon badge" style="width:150px;height:150px;border-radius:20px;margin-bottom:10px">
       <div class="tt">🔵 $ANT</div>
       <div class="td sans">ANTHROPIC — THE TICKER TWIN</div>
       <p class="rep sans"><b>What it is:</b> the three letters themselves. Wall Street trades $ANT the stock on Nasdaq — this is the people's on-chain twin of that ticker, for anyone who wants to hold the letters directly.</p>
