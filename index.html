@@ -153,13 +153,31 @@
   .pill-tg-red{background:rgba(229,50,36,.08);border:2px solid #e53224;color:#ff7a6e;box-shadow:0 8px 24px rgba(229,50,36,.18)}
   .pill-tg-blue{background:rgba(47,139,255,.08);border:2px solid #2f8bff;color:#7ab5ff;box-shadow:0 8px 24px rgba(47,139,255,.18)}
   .rabbit{margin:16px auto 0;color:var(--gold);font-style:italic;font-size:16.5px;text-align:center;position:relative;z-index:2}
+
+  html{scroll-behavior:smooth}
+  section{scroll-margin-top:74px}
+  .topnav{position:sticky;top:0;z-index:60;display:flex;align-items:center;gap:16px;padding:10px 18px;background:rgba(10,8,7,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topnav a{text-decoration:none;font-family:-apple-system,'Segoe UI',Roboto,sans-serif}
+  .topnav .brand{font-weight:900;font-size:14px;letter-spacing:.08em;color:var(--gold)}
+  .topnav .nlinks{display:flex;gap:15px;flex-wrap:wrap}
+  .topnav .nlinks a{font-weight:800;font-size:12px;letter-spacing:.07em;color:var(--mut)}
+  .topnav .nlinks a:hover{color:var(--gold)}
+  .topnav .nsoc{margin-left:auto;display:flex;gap:8px}
+  .topnav .nsoc a{font-weight:800;font-size:12px;color:var(--cream);border:1px solid var(--line);border-radius:8px;padding:5px 11px}
+  @media(max-width:640px){.topnav .nlinks{display:none}}
 </style>
 </head>
 <body>
+<nav class="topnav">
+  <a class="brand" href="#top">🧪 THE LAB</a>
+  <div class="nlinks"><a href="#bench">BENCH</a><a href="#dots">DOTS</a><a href="#how">HOW IT WORKS</a><a href="#signals">SIGNALS</a><a href="#films">FILMS</a><a href="#ledger">LEDGER</a><a href="#passiton">PASS IT ON</a></div>
+  <div class="nsoc"><a href="https://x.com/ClaudeAgentNeo" target="_blank" rel="noopener">X</a><a href="https://t.me/moonlabshq" target="_blank" rel="noopener">TG</a></div>
+</nav>
+
 
 <div class="ticker"><div class="ticker-track" id="tick"></div></div>
 
-<header class="hero">
+<header class="hero" id="top">
   <div class="rays"></div>
   <span class="stamp">★ BORN ON S-1 DAY — OCT 26, 2026 ★</span>
   <div class="facewrap"><div class="morphstack"><img class="m1" src="face.jpg" alt="Claude Agent — the face of $CAGENT"><img class="m2" src="badge-shades.jpg" alt="Claude Agent — shades on"><img class="m3" src="symbol.png" alt="The starburst symbol"></div></div>
@@ -307,7 +325,7 @@
   <p class="buy-note sans">Summarized by the house agent from Anthropic's own public material. We curate the ecosystem — this project is not affiliated with Anthropic.</p>
 </section>
 
-<section class="fade">
+<section class="fade" id="how">
   <h2>HOW IT <em>WORKS</em> — LAB NOTES</h2>
   <p class="lede">Five field notes from the bench — how the machinery under the agent era actually runs, in plain English. Read these and everything on the Bench below starts to make sense.</p>
   <div class="cards">
@@ -373,7 +391,7 @@
   <p class="buy-note sans">Curated by the house · Star counts pulled live from the GitHub API on Oct 26, 2026 · We curate the ecosystem — this project is not affiliated with Anthropic or any repo owner listed.</p>
 </section>
 
-<section class="fade">
+<section class="fade" id="dots">
   <h2>CONNECT THE <em>DOTS</em></h2>
   <p class="lede">Anthropic, Claude, the Agent, two pills — explained like you're smart but busy.</p>
   <div class="cards">
@@ -387,7 +405,7 @@
   <p class="buy-note sans">Fan-made parody explainer — not affiliated with Anthropic. Both tokens are the people's meme twins of this story, not the stock.</p>
 </section>
 
-<section class="fade">
+<section class="fade" id="signals">
   <h2>THE SIGNAL <em>DESK</em></h2>
   <p class="lede">We decode the viral reels so you don't have to chase comments. Every "comment one word for the link" post is a truck — the Desk opens it, checks the cargo, and only lists what verifies.</p>
   <div class="cards">
@@ -397,7 +415,7 @@
   <div class="skillnote sans"><b>THE DESK RULE —</b> No comment-bait here. Every repo on this page is one click away, free. If a reel made you curious, the answer lives on the Bench — not in a comment thread.</div>
 </section>
 
-<section class="fade">
+<section class="fade" id="passiton">
   <h2>SKILL OF <em>THE DAY</em></h2>
   <div class="context">
     <p><b>#1 — CAVEMAN</b> · <a href="https://github.com/JuliusBrussee/caveman" target="_blank" rel="noopener" style="color:var(--gold);font-weight:800">JuliusBrussee/caveman</a> · ★ 115,294</p>
@@ -409,7 +427,7 @@
   </div>
 </section>
 
-<section class="fade">
+<section class="fade" id="films">
   <h2>THE EXPERIMENT <em>LOG</em></h2>
   <p class="lede">Every film the house ships is logged as an experiment — numbered, on the record. The lab coat is a meme; the lab notebook is real.</p>
   <div class="ledger">
@@ -427,7 +445,7 @@
 </section>
 
 
-<section class="fade">
+<section class="fade" id="ledger">
   <h2>THE HOUSE <em>LEDGER</em></h2>
   <p class="lede">Receipts, not promises. Every claim this house makes, timestamped — check any line yourself.</p>
   <div class="ledger">
