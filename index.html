@@ -265,22 +265,6 @@
 </section>
 
 <section class="fade">
-  <h2>BRING YOUR OWN <em>LLM</em></h2>
-  <p class="lede">Don't take our word for any of this. Take the house briefing to YOUR AI — Claude, ChatGPT, Grok, whoever you trust — paste it in, and let your own model cross-examine this entire page.</p>
-  <div class="promptbox">
-    <code id="briefText">Read https://claudeagentneo.github.io/ and explain this project honestly: What are $CAGENT and $ANT, how are they different, how do I buy each one safely, and what are the risks? Also summarize what its Intel Desk says is trending in the Claude ecosystem. Respect the parody disclosure — this is a fan project, not the Nasdaq stock.</code>
-    <button onclick="copyBrief(this)">COPY THE BRIEFING</button>
-  </div>
-  <div class="llmrow">
-    <a href="https://claude.ai/new" target="_blank" rel="noopener">ASK CLAUDE →</a>
-    <a href="https://chatgpt.com" target="_blank" rel="noopener">ASK CHATGPT →</a>
-    <a href="https://grok.com" target="_blank" rel="noopener">ASK GROK →</a>
-    <a href="https://t.me/moonlabshq" target="_blank" rel="noopener">OR TALK IN TELEGRAM →</a>
-  </div>
-  <p class="buy-note sans">No logins, wallets or keys live on this page — your AI reads the same open page you did.</p>
-</section>
-
-<section class="fade">
   <h2>THE INTEL <em>DESK</em></h2>
   <p class="lede">Not just a meme. The house tracks the whole Claude ecosystem — the repos, the skills, the tools moving the agent era — and puts the signal on one page. This page is the asset; the tokens are its flag.</p>
 
@@ -343,11 +327,6 @@
     var t = document.getElementById('caText').textContent.trim();
     if (navigator.clipboard) { navigator.clipboard.writeText(t); }
     btn.textContent = "COPIED ✓"; setTimeout(function(){ btn.textContent = "COPY CA"; }, 1600);
-  }
-  function copyBrief(btn){
-    var t = document.getElementById('briefText').textContent.trim();
-    if (navigator.clipboard) { navigator.clipboard.writeText(t); }
-    btn.textContent = "COPIED ✓ — NOW PASTE IT TO YOUR AI"; setTimeout(function(){ btn.textContent = "COPY THE BRIEFING"; }, 2200);
   }
   function fmt$(n){ if(n==null) return "—"; if(n>=1e6) return "$"+(n/1e6).toFixed(2)+"M"; if(n>=1e3) return "$"+(n/1e3).toFixed(1)+"K"; return "$"+n.toFixed(2); }
   function loadStats(){
