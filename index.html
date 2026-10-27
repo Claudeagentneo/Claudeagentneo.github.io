@@ -38,6 +38,9 @@
   .morphstack img.m3{animation:morphC 15s ease-in-out infinite}
   .morphstack img.m4{animation:morphD 15s ease-in-out infinite}
   .morphstack img.m5{object-fit:contain;padding:26px;animation:morphE 15s ease-in-out infinite}
+  .hero canvas.rain{position:absolute;inset:0;width:100%;height:100%;opacity:.15;pointer-events:none;z-index:0}
+  .hero>*{position:relative;z-index:1}
+  .hero canvas.rain{z-index:0}
   @keyframes morphA{0%,15%{opacity:1}20%,95%{opacity:0}100%{opacity:1}}
   @keyframes morphB{0%,15%{opacity:0}20%,35%{opacity:1}40%,100%{opacity:0}}
   @keyframes morphC{0%,35%{opacity:0}40%,55%{opacity:1}60%,100%{opacity:0}}
@@ -198,6 +201,7 @@
 <div class="ticker"><div class="ticker-track" id="tick"></div></div>
 
 <header class="hero" id="top">
+  <canvas class="rain" id="rain" aria-hidden="true"></canvas>
   <div class="rays"></div>
   <span class="stamp">★ BORN ON S-1 DAY — OCT 26, 2026 ★</span>
   <div class="facewrap"><div class="morphstack"><img class="m1" src="face.jpg" alt="Claude Agent — the face of $CAGENT"><img class="m2" src="neon-cg.jpg" alt="Claude Agent — $CAGENT neon badge"><img class="m3" src="badge-shades.jpg" alt="Claude Agent — shades on"><img class="m4" src="neon-ant.jpg" alt="Anthropic — $ANT neon badge"><img class="m5" src="symbol.png" alt="The starburst symbol"></div></div>
@@ -582,6 +586,36 @@
     var ct = document.getElementById('benchCount'); if (ct) ct.textContent = shown + " SPECIMENS ON THE BENCH";
   }
   applyBench();
+
+  /* THE RAIN — Matrix-style code rain behind the hero. Orange & blue, house colors.
+     Pauses when the hero is off-screen or the visitor prefers reduced motion. */
+  (function(){
+    var cv = document.getElementById('rain'); if (!cv) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var ctx = cv.getContext('2d'), hero = cv.parentElement;
+    var glyphs = 'アイウエオカキクケコサシスセソ0123456789$ANT CAGENT<>/*'.split('');
+    var cols = 0, drops = [], W = 0, H = 0, running = true, fs = 15;
+    function size(){
+      W = hero.clientWidth; H = hero.clientHeight;
+      cv.width = W; cv.height = H;
+      cols = Math.floor(W / fs); drops = [];
+      for (var i = 0; i < cols; i++) drops[i] = Math.random() * -40;
+    }
+    size(); window.addEventListener('resize', size);
+    if ('IntersectionObserver' in window) new IntersectionObserver(function(e){ running = e[0].isIntersecting; }).observe(hero);
+    setInterval(function(){
+      if (!running) return;
+      ctx.fillStyle = 'rgba(11,13,18,0.10)'; ctx.fillRect(0, 0, W, H);
+      ctx.font = fs + 'px monospace';
+      for (var i = 0; i < cols; i++){
+        var ch = glyphs[Math.floor(Math.random() * glyphs.length)];
+        ctx.fillStyle = (i % 7 === 0) ? 'rgba(96,165,250,0.9)' : 'rgba(232,131,58,0.9)';
+        ctx.fillText(ch, i * fs, drops[i] * fs);
+        if (drops[i] * fs > H && Math.random() > 0.976) drops[i] = Math.random() * -20;
+        drops[i] += 0.55;
+      }
+    }, 50);
+  })();
 
 </script>
 </body>
